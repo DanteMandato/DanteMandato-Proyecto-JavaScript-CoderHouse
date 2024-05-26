@@ -1,1 +1,0 @@
-# DanteMandato-Proyecto-JavaScript-CoderHouse
