@@ -1,0 +1,6 @@
+funciones de orden supoerior
+
+es una funcion que devuelve una funcion 
+
+lo que las funciones ejecuntan se guardan en una variable, quiere decir que el resultado de una funcion que devuelve una funcion es convertir a la variable que toma ese resultado en otra funcion.
+

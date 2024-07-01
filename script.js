@@ -27,9 +27,8 @@ function validarFecha(fecha) {
 
 // Clase Turno para encapsular la información de cada turno
 class Turno {
-    constructor(nombre, dia, fecha, horario) {
+    constructor(nombre, fecha, horario) {
         this.nombre = nombre;
-        this.dia = dia;
         this.fecha = fecha;
         this.horario = horario;
     }
@@ -37,15 +36,7 @@ class Turno {
 
 // Función para solicitar un turno
 function solicitarTurno() {
-    let diasDisponibles = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
     let horariosDisponibles = ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00'];
-
-    // Selección de día
-    let diaElegido = solicitarDato(
-        "Seleccione un día:\n 1. Lunes\n 2. Martes\n 3. Miércoles\n 4. Jueves\n 5. Viernes",
-        dato => !isNaN(parseInt(dato)) && parseInt(dato) >= 1 && parseInt(dato) <= 5
-    );
-    let diaSeleccionado = diasDisponibles[parseInt(diaElegido) - 1];
 
     // Selección de fecha
     let fechaElegida = solicitarDato(
@@ -68,9 +59,9 @@ function solicitarTurno() {
 
     // Reservar el turno
     if (verificarDisponibilidad(fechaElegida, horarioSeleccionado)) {
-        const nuevoTurno = new Turno(nombreCompleto, diaSeleccionado, fechaElegida, horarioSeleccionado);
+        const nuevoTurno = new Turno(nombreCompleto, fechaElegida, horarioSeleccionado);
         turnosReservados.push(nuevoTurno);
-        alert(`Turno reservado para ${nombreCompleto} el ${diaSeleccionado} ${fechaElegida} a las ${horarioSeleccionado}.`);
+        alert(`Turno reservado para ${nombreCompleto} ${fechaElegida} a las ${horarioSeleccionado}.`);
     } else {
         alert("El horario solicitado ya está reservado.");
     }
@@ -83,7 +74,7 @@ function verTurnosReservados() {
     } else {
         let mensaje = "Turnos reservados:\n";
         turnosReservados.forEach(turno => {
-            mensaje += `${turno.nombre}, ${turno.dia}, ${turno.fecha}, Hora: ${turno.horario}\n`;
+            mensaje += `${turno.nombre}, ${turno.fecha}, Hora: ${turno.horario}\n`;
         });
         alert(mensaje);
     }
