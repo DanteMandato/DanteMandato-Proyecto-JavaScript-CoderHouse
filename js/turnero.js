@@ -6,7 +6,7 @@ btnToggleClima.id = 'btn-toggle-clima';
 btnToggleClima.textContent = 'Mostrar Clima';
 
 // API Key para Weather API
-const WEATHER_API_KEY = '2d1853a58c4c41f6ac4212949241707'; // Reemplaza con tu propia API Key de Weather API
+const WEATHER_API_KEY = '2d1853a58c4c41f6ac4212949241707'; 
 const WEATHER_API_URL = 'http://api.weatherapi.com/v1/current.json';
 
 // Obtener la ubicación del usuario y luego obtener el clima
