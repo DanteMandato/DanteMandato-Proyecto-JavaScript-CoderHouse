@@ -1,16 +1,21 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #74a6b9;
     height: 100vh;
     margin: 0;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #Solicitar_container {
+    position:relative;
     background-color: #fff;
     padding: 20px;
+    margin-top: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 500px;
@@ -52,4 +57,15 @@ button {
 
 button:hover {
     background-color: #218838;
+}
+
+#clima {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

@@ -5,35 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva de turnos</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 </head>
 <body>
     <main>
-    <section id="Solicitar_container"  >
-        <h2>Solicitud de Turno</h2>
-        <form action="" id="add-turn">
-            <label for="nombreYapellido">Nombre y Apellido:</label>
-            <input id="nombre" type="text" name="nombreYapellido" required>
-            
-            <label for="hora">Hora:</label>
-            <input id="hora" type="time" name="hora" required>
-            
-            <label for="fecha">Fecha:</label>
-            <input id="fecha" type="date" name="fecha" required>
-            
-            <button id="btn" type="submit">Solicitar Turno</button>
-        </form>
-    </section>
-    <section id="turno" class="container">
-        <h2>Turno Reservado:</h2>
-        <div id="solicitado">
-
-        </div>
-    </section>
-</main>
+        <section id="Solicitar_container">
+            <h2>Solicitud de Turno</h2>
+            <form action="" id="add-turn">
+                <label for="nombreYapellido">Nombre y Apellido:</label>
+                <input id="nombre" type="text" name="nombreYapellido" required>
+                
+                <label for="dni">DNI:</label>
+                <input id="dni" type="text" name="dni" required>
+                
+                <label for="hora">Hora:</label>
+                <input id="hora" type="time" name="hora" required>
+                
+                <label for="fecha">Fecha:</label>
+                <input id="fecha" type="date" name="fecha" required>
+                
+                <label for="obraSocial">Obra Social:</label>
+                <select id="obraSocial" name="obraSocial" required>
+                    <option value="Medife">Medife</option>
+                    <option value="IOMA">IOMA</option>
+                    <option value="Swiss Medical">Swiss Medical</option>
+                    <option value="Galeno">Galeno</option>
+                </select>
+                
+                <button id="btn" type="submit">Solicitar Turno</button>
+            </form>
+        </section>
+        <section id="turno" class="container">
+            <h2>Turno Reservado:</h2>
+            <div id="solicitado"></div>
+        </section>
+        <section id="clima" class="container">
+            <h2>Clima Actual:</h2>
+            <div id="clima-info"></div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="/js/turnero.js"></script>
 </body>
 </html>
